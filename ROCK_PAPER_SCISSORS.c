@@ -148,7 +148,7 @@ int main()
         
         else if (choice!=player_luck)
         {
-            printf("Computers turn\n");
+            printf("Computers turn completed...\n");
             int computer_first_turn=generateRandomNumber(4);
             
             if (computer_first_turn==1 || computer_first_turn==0)
