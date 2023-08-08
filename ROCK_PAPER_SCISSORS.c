@@ -26,6 +26,9 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
+        printf("\n");
+        printf("Round %d:\n",i);
+        printf("\n");
         printf("The first turn will be decided by the head-tail toss\n");
         printf("To choose head press 0\n");
         printf("To choose tail press 1\n");
