@@ -11,6 +11,8 @@ int generateRandomNumber(int n)
 
 int main()
 {
+    int player_score = 0;
+    int Computer_score = 0;
     int n,player_input,coin;
     char name[34];
 
@@ -63,6 +65,7 @@ int main()
                 {
                     printf("Scissors\n");
                     printf("%s has won this round\n",name);
+                    player_score++;
                 }
 
 
@@ -71,6 +74,7 @@ int main()
                     int score_computer00 = 1;
                     printf("Paper\n");
                     printf("Computer has won this round\n");
+                    Computer_score++;
                 }
             }
 
@@ -87,6 +91,7 @@ int main()
                 {
                     printf("Rock\n");
                     printf("Computer has won this round\n");
+                    Computer_score++;
                 }
 
 
@@ -101,6 +106,7 @@ int main()
                 {
                     printf("Paper\n");
                     printf("%s has won this round\n",name);
+                    player_score++;
                 }
 
             }
@@ -119,6 +125,7 @@ int main()
                 {
                     printf("Rock\n");
                     printf("%s has won this round\n",name);
+                    player_score++;
                 }
 
 
@@ -126,6 +133,7 @@ int main()
                 {
                     printf("Scissors\n");
                     printf("Computer has won this round\n");
+                    Computer_score++;
                 }
 
 
@@ -163,12 +171,14 @@ int main()
                     printf("Computer:-Rock\n");
                     printf("Player:-Scissors\n");
                     printf("Computer has won this round\n");
+                    Computer_score++;
                 }
                 else if(player_input==3)
                 {
                     printf("Computer:-Rock\n");
                     printf("Player:-Paper\n");
                     printf("%s has won this round\n",name);
+                    player_score++;
                 }
             }
 
@@ -187,6 +197,7 @@ int main()
                     printf("Computer:-Scissors\n");
                     printf("Player:-Rock\n");
                     printf("%s has won this round\n",name);
+                    player_score++;
                 }
                 else if (player_input==2)
                 {
@@ -199,6 +210,7 @@ int main()
                     printf("Computer:-Scissors\n");
                     printf("Player:-Paper\n");
                     printf("Computer has won this round\n");
+                    Computer_score++;
                 }
             }
 
@@ -217,12 +229,14 @@ int main()
                     printf("Computer:-Paper\n");
                     printf("Player:-Paper\n");
                     printf("Computer has won this round\n");
+                    Computer_score++;
                 }
                 else if (player_input==2)
                 {
                     printf("Computer:-Paper\n");
                     printf("Player:-Scissors\n");
                     printf("%s has won this round\n",name);
+                    player_score++;
                 }
                 else if(player_input==3)
                 {
@@ -233,14 +247,25 @@ int main()
             }
         }
         
-        else
-        {
-            printf("Please choose those options which are mentioned\n");
-        }
     }
 
 
     printf("Match has ended\n");
-
+    printf("Hence the total score of %s is %d\n",name,player_score);
+    printf("Hence the total score of Computer is %d\n",Computer_score);
+    if (player_score>Computer_score)
+    {
+        printf("Hence %s is the winner of this match\n",name);
+    }
+    else if (player_score<Computer_score)
+    {
+        printf("Lol Computer is the winner of this match\n");
+    }
+    else
+    {
+        printf("Shit it's a draw\n");
+    }
+    
+    
     return 0;
 }
